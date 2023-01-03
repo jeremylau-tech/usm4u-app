@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Activities() {
+function ActivitiesList() {
   return (
     <div className='Activities'>
       <div className='text-black text-center bg-white py-10'> {/** TESTING */}
@@ -10,4 +10,4 @@ function Activities() {
   )
 }
 
-export default Activities
+export default ActivitiesList
