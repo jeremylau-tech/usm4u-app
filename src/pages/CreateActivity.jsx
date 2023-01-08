@@ -2,7 +2,7 @@ import React from "react";
 export default function CreateActivity() {
     return(
         <div>
-            <div className='w-full bg-white py-16 lg:px-16 px-5'>
+            <div className='w-full bg-white py-16 lg:px-16 px-5 m-0'>
                 <div className="flex justify-center">
                     <select className="w-96 h-16 mb-20 text-xl border-orange-500 border-4 rounded-lg text-black focus:ring-4 focus:outline-none font-medium px-4 py-2.5 text-center inline-flex items-center" name="action" id="action">
                         <option disabled selected>Choose your action</option>
