@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import ActivitiesList from './pages/ActivitiesList';
+import Activities from './pages/Activities';
 import Opportunities from './pages/Opportunities';
 import InfoHub from './pages/InfoHub';
 import Feedback from './pages/Feedback';
@@ -14,7 +14,7 @@ function App() {
       <Navbar />
         <Routes> {/** outside Routes: display for all pages */}
           <Route path='/' element ={<Home />} />
-          <Route path='/ActivitiesList' element ={<ActivitiesList />} />
+          <Route path='/Activities' element ={<Activities />} />
           <Route path='/Opportunities' element ={<Opportunities />} />
           <Route path='/InfoHub' element ={<InfoHub />} />
           <Route path='/Feedback' element ={<Feedback />} />
