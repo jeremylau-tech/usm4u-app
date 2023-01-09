@@ -1,6 +1,5 @@
 import React from 'react';
-import Form from '../components/Feedback/Form';
-
+import Form from '../components/feedback/Form';
 function Feedback() {
   return (
     <div className='Feedback'>
