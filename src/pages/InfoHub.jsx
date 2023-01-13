@@ -14,31 +14,31 @@ function InfoHub() {
       <div className='text-black text-center bg-white py-10'>
         <div className="flex justify-center">
           <div className="bg-white rounded-lg border border-gray-200 w-[500px] text-gray-900">
-            <a href="https://maps.usm.my/main/" className="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://maps.usm.my/main/" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Campus Map
             </a>
-            <a href="https://www.myusminfo.com/usminfo/facilities/shuttle-bus" className="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://www.myusminfo.com/usminfo/facilities/shuttle-bus" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Shuttle Bus
             </a>
-            <a href="https://www.myusminfo.com/usminfo/facilities/banking" className="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://www.myusminfo.com/usminfo/facilities/banking" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Banking Services
             </a>
-            <a href="https://www.myusminfo.com/usminfo/facilities/panel-clinics" className="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://www.myusminfo.com/usminfo/facilities/panel-clinics" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Panel Clinics
             </a>
-            <a href="https://www.myusminfo.com/usminfo/facilities/libraries" className="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://www.myusminfo.com/usminfo/facilities/libraries" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Libraries
             </a>
-            <a href="https://www.myusminfo.com/usminfo/facilities/sports" className="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://www.myusminfo.com/usminfo/facilities/sports" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Sports and Recreation Facilities
             </a>
-            <a href="https://www.myusminfo.com/usminfo/links" className="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://www.myusminfo.com/usminfo/links" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Useful Links
             </a>
-            <a href="https://drive.google.com/file/d/1vIWMFbVRjPrtclC1G_gAW5NfBNLQVt-d/view?usp=sharing" className="block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://drive.google.com/file/d/1vIWMFbVRjPrtclC1G_gAW5NfBNLQVt-d/view?usp=sharing" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Academic Calendar
             </a>
-            <a href="https://www.myusminfo.com/usminfo/academic-related/schools-faqs/com-usm" className="block px-6 py-2 border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
+            <a href="https://www.myusminfo.com/usminfo/academic-related/schools-faqs/com-usm" className="block px-6 py-3 border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               FAQs (School of Computer Sciences)
             </a> {/** last list - w/o border-b */}
           </div>
