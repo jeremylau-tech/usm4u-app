@@ -19,7 +19,7 @@ function Footer() {
           <a href="mailto:usm4u@gmail.com" className='font-medium'>usm4u.contact@gmail.com</a>
         </div>
       </div>
-      <div className='w-full mx-auto py-3 bg-[black] text-white text-center text-xs font-bold tracking-wide'>
+      <div className='w-full mx-auto py-3 bg-black text-white text-center text-xs font-bold tracking-wide'>
         <p>USM4U Developer, Universiti Sains Malaysia © 2022</p>
       </div>
     </div>
