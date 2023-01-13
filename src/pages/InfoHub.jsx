@@ -13,7 +13,7 @@ function InfoHub() {
       {/** Page content */}
       <div className='text-black text-center bg-white py-10'>
         <div className="flex justify-center">
-          <div className="bg-white rounded-lg border border-gray-200 w-[500px] text-gray-900">
+          <div className="bg-white rounded-lg border border-gray-200 md:w-[500px] w-[450px] text-gray-900">
             <a href="https://maps.usm.my/main/" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Campus Map
             </a>
