@@ -18,7 +18,7 @@ function InfoHub() {
               Campus Map
             </a>
             <a href="https://www.myusminfo.com/usminfo/facilities/shuttle-bus" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
-              Shuttle Bus
+              Shuttle Bus Schedule
             </a>
             <a href="https://www.myusminfo.com/usminfo/facilities/banking" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-100 focus:outline-none focus:ring-0 transition duration-200 cursor-pointer">
               Banking Services
