@@ -15,7 +15,8 @@ function Navbar() {
       <Link to='/' className='p-4'>
         <img className='w-[200px]' src={logo_usm_white} alt="/" />
       </Link>
-      <ul className='hidden md:flex'> {/** hidden on mobile devices, above mb: flex */}
+      <ul className='hidden lg:flex'> {/** hidden on mobile devices, above mb: flex */}
+        <Link to='/' className='p-4'>Home</Link>
         <Link to='/Activities' className='p-4'>Activities</Link>
         <Link to='/Opportunities' className='p-4'>Opportunities</Link>
         <Link to='/InfoHub' className='p-4'>InfoHub</Link>
@@ -23,15 +24,16 @@ function Navbar() {
         <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto ml-6 content-center text-black hover:scale-105 duration-300'>Log In</button>
       </ul>
       {/** toggle between buttons; mb-medium breakpoint */}
-      <div onClick={handleNav} className='block md:hidden'> {/** above mb: hidden */}
-        {nav ? <MdOutlineClose size={22} /> : <HiOutlineMenu size={22} />}
+      <div onClick={handleNav} className='block lg:hidden'> {/** above mb: hidden */}
+        {nav ? <MdOutlineClose size={25} /> : <HiOutlineMenu size={25} />}
       </div>
       <div className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'fixed left-[-100%]'}>
         <a href='/' className=''>
           <img className='w-[200px] my-4 ml-8' src={logo_usm_white} alt="/" />
         </a>
         <ul className='p-4'>
-          <a href='Activities' className='flex p-4 border-b border-gray-600'>Activities</a>
+          <a href='/' className='flex p-4 border-b border-gray-600'>Home</a>
+          <a href='/Activities' className='flex p-4 border-b border-gray-600'>Activities</a>
           <a href='/Opportunities' className='flex p-4 border-b border-gray-600'>Opportunities</a>
           <a href='/InfoHub' className='flex p-4 border-b border-gray-600'>InfoHub</a>
           <a href='/Feedback' className='flex p-4 border-b border-gray-600'>Feedback</a>
