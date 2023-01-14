@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 function Opportunities() {
   return (
     <div className='Opportunities'>
-      <div className='text-black text-center bg-white py-10'> {/** TESTING */}
+      <div className='flex flex-col text-black text-center bg-white'> {/** TESTING */}
+        <h1 className='text-[#F68B1F] md:text-4xl sm:text-3xl text-2xl font-bold mt-10 mb-2'>Opportunities</h1>
+        <div className='md:text-base text-sm my-1 md:my-2 lg:mx-14 mx-6 text-justify'>
+          <p className='text-center italic font-medium text-gray-400'>Looking for some opportunities? Don't worry, we've got you!</p>
+        </div>
         <div className="grid lg:grid-cols-3">
           {/* card */}
           <div className="card w-80 bg-base-100 shadow-2xl m-7">
