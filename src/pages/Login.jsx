@@ -51,14 +51,14 @@ function Login() {
         }}>   
         <div class="absolute bg-gradient-to-b from-purple-500 to-purple-400 opacity-20 inset-0 z-0"></div>
         <div class="min-h-screen sm:flex sm:flex-row mx-0 justify-center gap-12">
-          <div class="flex-col hidden lg:flex self-center py-10 pr-10 sm:max-w-5xl xl:max-w-2xl z-10">
+          <div class="flex-col hidden lg:flex mt-[130px] py-10 pr-10 sm:max-w-5xl xl:max-w-2xl z-10">
             <div class="self-start flex flex-col text-white">
               <h1 class="mb-3 font-bold text-5xl">Welcome To USM4U</h1>
-              <p class="pr-3">Your one and only, student application</p>
+              <p class="pr-3 italic">Your one and only, student application.</p>
             </div>
           </div>
           <div class="flex justify-center self-center z-10 py-10 lg:py-0">
-            <div class="px-12 pt-12 pb-6 bg-white mx-auto rounded-2xl w-[450px]">
+            <div class="px-12 pt-12 pb-6 bg-white mx-auto rounded-3xl w-[450px]">
               <div class="mb-4">
                 <h3 class="font-semibold text-2xl text-gray-800">Sign In</h3>
                 <p class="text-gray-500">Please sign in to your account.</p>

@@ -29,7 +29,7 @@ function App() {
           <Route path='/InfoHub' element ={<InfoHub />} />
           <Route path='/Feedback' element ={<Feedback />} />
           <Route path='/Login' element ={<Login/>} />
-          <Route path='/CreateAccount' element ={<CreateAccount/>} />
+          <Route path='/CreateAccount' element ={<CreateAccount />} />
         </Routes>
       <Footer />
     </div>
