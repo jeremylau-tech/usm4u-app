@@ -3,7 +3,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Activities from './pages/Activities';
+import ActivityDetail from './pages/ActivityDetail';
 import Opportunities from './pages/Opportunities';
+import OpportunityDetail from './pages/OpportunityDetail'
 import InfoHub from './pages/InfoHub';
 import Feedback from './pages/Feedback';
 import { Routes, Route } from 'react-router-dom';
@@ -15,7 +17,9 @@ function App() {
         <Routes> {/** outside Routes: display for all pages */}
           <Route path='/' element ={<Home />} />
           <Route path='/Activities' element ={<Activities />} />
+          <Route path='/ActivityDetail' element ={<ActivityDetail />} />
           <Route path='/Opportunities' element ={<Opportunities />} />
+          <Route path='OpportunityDetail' element ={<OpportunityDetail />} />
           <Route path='/InfoHub' element ={<InfoHub />} />
           <Route path='/Feedback' element ={<Feedback />} />
         </Routes>

@@ -3,8 +3,12 @@ import React from "react";
 function ActivityDetail() {
     return(
         <div className="ActivityDetail">
-            <h1>Activity Detail</h1>
-        </div>
+            <div className='text-black text-center bg-white'>
+                <div>
+                    
+                </div>
+            </div>
+        </div>        
     )
 }
 
