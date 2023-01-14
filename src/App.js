@@ -11,6 +11,7 @@ import Opportunities from './pages/Opportunities';
 import OpportunityDetail from './pages/OpportunityDetail'
 import InfoHub from './pages/InfoHub';
 import Feedback from './pages/Feedback';
+import Login from './pages/Login';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path='OpportunityDetail' element ={<OpportunityDetail />} />
           <Route path='/InfoHub' element ={<InfoHub />} />
           <Route path='/Feedback' element ={<Feedback />} />
+          <Route path='/Login' element ={<Login/>} />
         </Routes>
 
       <Footer />
