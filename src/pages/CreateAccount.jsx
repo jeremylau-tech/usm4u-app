@@ -26,7 +26,7 @@ function Login() {
       alert(errorCode);
       // ..
     });
-  }
+    }
 
   const signIn = () => {
 
@@ -83,7 +83,7 @@ function Login() {
                 </button>
                 <div className='italic text-sm mt-7 mb-4 text-center'>
                   <p>Already have an account?
-                    <Link to='/Login' className='text-purple-700 underline pl-1'>Log In</Link>
+                    <Link to='/Login' className='text-purple-700 underline pl-1'>Sign In</Link>
                   </p>
                 </div>
               </div>
