@@ -26,7 +26,7 @@ function Login() {
       alert(errorCode);
       // ..
     });
-    }
+  }
 
   const signIn = () => {
     signInWithEmailAndPassword(auth, email, password)
@@ -35,6 +35,7 @@ function Login() {
       const user = userCredential.user;
       console.log(user);
       alert("This user has succesfully signed in!");
+      
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -60,8 +61,8 @@ function Login() {
           <div class="flex justify-center self-center z-10 py-10 lg:py-0">
             <div class="px-12 pt-12 pb-6 bg-white mx-auto rounded-3xl w-[450px]">
               <div class="mb-4">
-                <h3 class="font-semibold text-2xl text-gray-800">Sign In</h3>
-                <p class="text-gray-500">Please sign in to your account.</p>
+                <h3 class="font-semibold text-2xl text-gray-800">Log In</h3>
+                <p class="text-gray-500">Please log in to your account.</p>
               </div>
               <div class="space-y-5">
                 <div class="space-y-2">
@@ -89,7 +90,7 @@ function Login() {
               </div>
               <div className="text-center">
                 <button onClick={signIn} type="submit" class="w-[150px] justify-center bg-purple-400 hover:bg-purple-500 text-gray-100 mt-2 p-3 rounded-full tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500">
-                  Sign in
+                  Log in
                 </button>
 {/*}
                 <button type="submit" class="w-full flex justify-center bg-purple-400  hover:bg-purple-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500 ml-3">
