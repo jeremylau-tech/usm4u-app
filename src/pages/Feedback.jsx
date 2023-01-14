@@ -26,7 +26,7 @@ function Feedback() {
       createdAt:serverTimestamp(),
     }
 
-    // testing
+    // testing filtration
     onSnapshot(q, (snapshot) => {
       let feedback = []
       snapshot.docs.forEach((doc) => {
