@@ -1,13 +1,18 @@
 import React, { useRef }  from 'react';
 import { firestore } from "../firebase";
-import { addDoc, collection } from "@firebase/firestore";
+import { addDoc, collection, query, orderBy, serverTimestamp, onSnapshot } from "@firebase/firestore";
 
 function Feedback() {
   const nameRef = useRef();
   const emailRef = useRef();
   const phoneRef = useRef();
   const messageRef = useRef();
+
+  // collection ref
   const ref = collection(firestore, "feedback");
+
+  // query
+  const q = query(ref, orderBy("createdAt", "asc"));
 
   const handleSave = async(e) => {
     e.preventDefault();
@@ -18,7 +23,18 @@ function Feedback() {
       email:emailRef.current.value,
       phone:phoneRef.current.value,
       message:messageRef.current.value,
+      createdAt:serverTimestamp(),
     }
+
+    // testing
+    onSnapshot(q, (snapshot) => {
+      let feedback = []
+      snapshot.docs.forEach((doc) => {
+        feedback.push({ ...doc.data(), id:doc.id })
+      })
+      console.log(feedback)
+    })
+    // testing
 
     try {
       addDoc(ref, data);
