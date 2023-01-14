@@ -64,8 +64,8 @@ function Login() {
                 <div class="flex justify-center self-center  z-10">
                     <div class="p-12 bg-white mx-auto rounded-2xl w-[450px] ">
                         <div class="mb-4">
-                        <h3 class="font-semibold text-2xl text-gray-800">Sign In </h3>
-                        <p class="text-gray-500">Please sign in to your account.</p>
+                        <h3 class="font-semibold text-2xl text-gray-800">Create An Account </h3>
+                        <p class="text-gray-500">Please fill your details below.</p>
                         </div>
                         <div class="space-y-5">
                                     <div class="space-y-2">
@@ -79,26 +79,27 @@ function Login() {
                         <input class="w-full content-center text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-purple-400" type="" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                         <div class="flex items-center justify-between">
-                        <div class="flex items-center">
+                        {/* <div class="flex items-center">
                             <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded"/>
                             <label for="remember_me" class="ml-2 block text-sm text-gray-800">
                             Remember me
                             </label>
-                        </div>
+                        </div> */}
                         <div class="text-sm">
                             <a href="https://github.com/FortNynja-Ltd/fn-website/blob/JeremyLau/src/pages/Home/Testimonial.tsx" class="text-purple-400 hover:text-purple-500">
                             Forgot your password?
                             </a>
                         </div>
                         </div>
-                        <div className='flex'>
-                        <button onClick={signIn} type="submit" class="w-full flex justify-center bg-purple-400  hover:bg-purple-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500 mr-1">
-                            Sign in
+                        <div className='flex '>
+                        <button onClick={signUp} type="submit" class="w-full flex justify-center bg-purple-400  hover:bg-purple-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500 mr-1">
+                            Create Account
                         </button>
-                        <button type="submit" class="w-full flex justify-center bg-purple-400  hover:bg-purple-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500 ml-1">
-                        <Link to='/CreateAccount' >Create Account</Link>
+                        <button onClick={signIn} type="submit" class="w-full flex justify-center bg-purple-400  hover:bg-purple-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500 ml-1">
+                        <Link to='/Login' >Login</Link> 
                         </button>
                         </div>
+
                         </div>
                         <div class="pt-5 text-center text-gray-400 text-xs">
                         <span>
