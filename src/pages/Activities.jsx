@@ -1,7 +1,27 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import { firestore } from '../firebase'
 import { Link } from 'react-router-dom'
+import { getDocs, collection } from "@firebase/firestore";
 
 function Activities() {
+
+  const [activities, setActivities] = useState([]);
+
+  const fetchPost = async () => {
+       
+    await getDocs(collection(firestore, "feedback"))
+        .then((querySnapshot)=>{               
+            const newData = querySnapshot.docs
+                .map((doc) => ({...doc.data(), id:doc.id }));
+            setActivities(newData);
+            console.log(activities, newData);                
+        })   
+  }
+
+  useEffect(()=>{
+    fetchPost();
+  }, [])
+
   return (
     <div className='Activities'>
       <div className='flex flex-col text-black text-center bg-white'> {/** TESTING */}
@@ -9,6 +29,7 @@ function Activities() {
         <div className='md:text-base text-sm my-1 md:my-2 lg:mx-14 mx-6 text-justify'>
           <p className='text-center italic font-medium text-gray-400'>USMian, it is time to participate some intersting activity!</p>
         </div>
+        
         <div className="grid lg:grid-cols-3">
           {/* card */}
           <div className="card w-80 bg-base-100 shadow-2xl m-7">
@@ -26,6 +47,18 @@ function Activities() {
               </div>
             </div>
           </div>
+
+          {
+              activities?.map((activity)=>(
+                <div>
+                    {activity.name}
+                    {activity.email}
+                    {activity.message}
+                    {activity.phone}
+                </div>
+            ))
+          }
+
         </div>
       </div>
     </div>        
