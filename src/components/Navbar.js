@@ -21,7 +21,11 @@ function Navbar() {
         <Link to='/Opportunities' className='p-4'>Opportunities</Link>
         <Link to='/InfoHub' className='p-4'>InfoHub</Link>
         <Link to='/Feedback' className='p-4'>Feedback</Link>
-        <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto ml-6 content-center text-black hover:scale-105 duration-300'><Link to='/Login'>Login</Link></button>
+        <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center ml-6'>
+          <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto content-center text-black hover:scale-105 duration-300'>
+            Log In
+          </button>
+        </Link>
       </ul>
       {/** toggle between buttons; mb-medium breakpoint */}
       <div onClick={handleNav} className='block lg:hidden'> {/** above mb: hidden */}
@@ -39,7 +43,11 @@ function Navbar() {
           <a href='/Feedback' className='flex p-4 border-b border-gray-600'>Feedback</a>
         </ul>
         <div className='mx-7'>
-          <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto mt-14 content-center text-black hover:scale-105 duration-300'></button>
+          <Link to='/Login' className='w-[110px] h-[45px]'>
+            <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto mt-14 content-center text-black hover:scale-105 duration-300'>
+              Log In
+            </button>
+          </Link>
         </div>
       </div>
     </div>
