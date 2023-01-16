@@ -15,6 +15,7 @@ function Feedback() {
   const q = query(ref, orderBy("createdAt", "asc"));
 
   const handleSave = async(e) => {
+    alert('We appreciate your feedback!');
     e.preventDefault();
     console.log(messageRef.current.value);
 
@@ -41,6 +42,8 @@ function Feedback() {
     } catch(e) {
       console.log(e);
     }
+
+    e.target.reset();
   }
 
   return (
