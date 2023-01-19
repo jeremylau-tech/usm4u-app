@@ -7,8 +7,7 @@ function Activities() {
 
   const [data, setData] = useState([]);
 
-  const fetchPost = async () => {
-       
+  const fetchPost = async () => {       
     await getDocs(collection(firestore, "activity"))
         .then((querySnapshot)=>{               
             const newData = querySnapshot.docs
@@ -36,7 +35,7 @@ function Activities() {
                 <div>
                     {/* card */}
                     <div className="card w-80 bg-base-100 shadow-2xl m-7">
-                      <figure><img src={data ? data.activityPoster : "Go to Home"} alt="Shoes" /></figure>
+                      <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                       <div className="card-body text-justify">
                         <h2 className="card-title">{data.activityName}</h2>
                         <p className="leading-5">{data.activityDate}</p>
