@@ -1,7 +1,7 @@
 import React from 'react';
-import Hero from '../components/Home/Hero';
-import Highlights from '../components/Home/Highlights';
-import Announcement from '../components/Home/Announcement';
+import Hero from '../components/home/Hero';
+import Highlights from '../components/home/Announcement';
+import Announcement from '../components/home/Highlights';
 
 function Home() {
   return (
