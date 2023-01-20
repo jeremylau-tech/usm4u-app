@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Announcement() {
   return (
@@ -15,9 +16,11 @@ function Announcement() {
           <p>All students are required to vote at Dewan Pelajar from 8am - 6pm.</p>  {/** details */}
         </div>
         <div className='px-[80px] pt-5 pb-10 flex justify-center'>    {/** button */}
-          <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto content-center text-black hover:scale-105 duration-300'>
-            Read More
-          </button>
+          <Link to='/AnnouncementDetail'>
+            <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto content-center text-black hover:scale-105 duration-300'>
+              Read More
+            </button>
+          </Link>
         </div>
       </div>
     </div>
