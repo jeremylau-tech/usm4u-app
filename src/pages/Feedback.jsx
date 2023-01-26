@@ -1,15 +1,21 @@
 import React, { useRef }  from 'react';
 import { firestore } from "../firebase";
-import { addDoc, collection } from "@firebase/firestore";
+import { addDoc, collection, query, orderBy, serverTimestamp, onSnapshot } from "@firebase/firestore";
 
 function Feedback() {
   const nameRef = useRef();
   const emailRef = useRef();
   const phoneRef = useRef();
   const messageRef = useRef();
+
+  // collection ref
   const ref = collection(firestore, "feedback");
 
+  // query
+  const q = query(ref, orderBy("createdAt", "asc"));
+
   const handleSave = async(e) => {
+    alert('We appreciate your feedback!');
     e.preventDefault();
     console.log(messageRef.current.value);
 
@@ -18,13 +24,26 @@ function Feedback() {
       email:emailRef.current.value,
       phone:phoneRef.current.value,
       message:messageRef.current.value,
+      createdAt:serverTimestamp(),
     }
+
+    // testing filtration
+    onSnapshot(q, (snapshot) => {
+      let feedback = []
+      snapshot.docs.forEach((doc) => {
+        feedback.push({ ...doc.data(), id:doc.id })
+      })
+      console.log(feedback)
+    })
+    // testing
 
     try {
       addDoc(ref, data);
     } catch(e) {
       console.log(e);
     }
+
+    e.target.reset();
   }
 
   return (

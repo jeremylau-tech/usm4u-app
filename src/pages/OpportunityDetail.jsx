@@ -15,7 +15,12 @@ function OpportunityDetail() {
                 <h2 className="text-2xl font-bold pl-5 pb-3">Venue</h2>
                 <p className="text-xl pl-5 pb-3 mb-5">{data ? data.opportunityVenue : "Go to Home"}</p>
                 <div className="pl-5 pb-3">
-                    <a href={data ? data.opportunityRegLink : "Go to Home"} className="btn" > Apply Now</a>
+                    {/* <a href={data ? data.opportunityRegLink : "Go to Home"} className="btn bg-[#F68B1F] hover:scale-105 duration-300 text-black" > Apply Now</a> */}
+                    <a href={data ? data.opportunityRegLink : "Go to Home"}>
+                                <button className='bg-[#F68B1F] w-[140px] h-[45px] font-medium rounded-lg mx-auto my-auto content-center text-black hover:scale-105 duration-300'>
+                                Register Now
+                                </button>
+                            </a>
                 </div>
             </div>
                 <div className="p-5 bg-white">
