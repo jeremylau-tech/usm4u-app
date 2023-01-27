@@ -1,20 +1,43 @@
 import React, { useEffect, useState } from "react";
 import CreateOpportunity from "./CreateOpportunity";
 import EditOpportunity from "./EditOpportunity";
+import { firestore } from "../firebase";
+import { addDoc, collection, getDocs } from "@firebase/firestore";
+import { getDatabase, ref, onValue } from "firebase/database";
 
-export default function Activities_StuOrgView(){
+export default function Opportunities_BhepaView(){
     const [action, setAction] = useState("Default")
     const [createVisible, setCreateVisible] = useState(false)
     const [editVisible, setEditVisible] = useState(false) 
 
+    const [opportunities, setOpportunities] = useState([]);
+
+    useEffect(() => {
+        getOpportunites()
+    }, [])
+
+    const getOpportunites = async() => {
+        await getDocs(collection(firestore, 'opportunity'))
+            .then(response => {
+                console.log(response)
+                const opps = response.docs.map(opp => ({
+                    data: opp.data(), 
+                    id: opp.id, 
+                }))
+                setOpportunities(opps)
+            }).catch(error => console.log(error.message))
+    }
+
     const handleOnChange = (e) => {
+        e.preventDefault();
         setAction(e.target.value);
+
     }
 
     useEffect(() => {
         action === "Create" ? setCreateVisible(true) : setCreateVisible(false);
         action === "Edit" ? setEditVisible(true) : setEditVisible(false);
-      }, [action]);
+      }, [action]);  
     
     return(
         <div className="w-full bg-white py-16 lg:px-16 px-5">
@@ -28,10 +51,18 @@ export default function Activities_StuOrgView(){
                     <option value="Edit">Edit Opportunity</option>
                 </select>
             </div>
+
+            {/* testing
+            <div>
+                <button onClick={() => getOpportunites()}>Refresh</button>
+                <ul>
+                    {opportunities.map(opp => (<li key={opp.data.opportunityName}></li>))}
+                </ul>
+            </div> */}
             
             <div>
                 {createVisible && <CreateOpportunity />}
-                {editVisible && <EditOpportunity />}
+                {editVisible && <EditOpportunity oppData = {opportunities}/>}
             </div>
         </div>
     )
