@@ -4,7 +4,7 @@ import { MdOutlineClose } from 'react-icons/md';
 import logo_usm_white from '../assets/logo-usm-white.png';
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function NavbarSigned() {
   const [nav, setNav] = useState(false)
 
   const handleNav = () => {
@@ -16,26 +16,25 @@ function Navbar() {
         <img className='w-[200px]' src={logo_usm_white} alt="/" />
       </Link>
       <ul className='hidden lg:flex'> 
-        <Link to='/HomeSigned' className='p-4 flex'>Home</Link>
+        <Link to='/HomeSigned' className='p-4'>Home</Link>
 
-      <div className="dropdown p-4">
-            <label tabIndex={0} className="flex">Activities</label>
-            <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded-box w-52 text-black hover:bg-white active:bg-white">
-              <li><a href='/CreateActivity'>Create Activity</a></li>
-              <li><a href='/EditActivity'>Edit Activity</a></li>
-            </ul>
-          </div>
-
-          <div className="dropdown p-4">
-            <label tabIndex={0} className="flex">Opportunities</label>
-            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-black">
-              <li><a href='/CreateOpportunity'>Create Opportunity</a></li>
-              <li><a href='/EditOpportunity'>Edit Opportunity</a></li>
-            </ul>
-          </div>
-
+        <div className="dropdown flex">
+          <label tabIndex={0} className="p-4 flex">Activities</label>
+          <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-black">
+            <li><a href='/CreateActivity'>Create Activity</a></li>
+            <li><a href='/EditActivity'>Edit Activity</a></li>
+          </ul>
+        </div>
+        <div className="dropdown flex">
+          <label tabIndex={0} className="p-4 flex">Opportunities</label>
+          <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-black">
+            <li><a href='/CreateOpportunity'>Create Opportunity</a></li>
+            <li><a href='/EditOpportunity'>Edit Opportunity</a></li>
+          </ul>
+        </div>
         
-        <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center ml-6'>
+        {/** <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center ml-6'> */}
+        <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center'>
           <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto content-center text-black hover:scale-105 duration-300'>
             Sign Out
           </button>
@@ -66,4 +65,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default NavbarSigned
