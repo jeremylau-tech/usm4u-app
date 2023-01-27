@@ -1,14 +1,15 @@
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import app from '../firebase';
 import { React, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
 
   const auth = getAuth(app);
 
-  const [email, setEmail] = useState ("")
-  const [password, setPassword] = useState ("")
+  const [email, setEmail] = useState ("");
+  const [password, setPassword] = useState ("");
+  const navigate = useNavigate();
 
   const signUp = () => {
 
@@ -17,7 +18,8 @@ function Login() {
       // Signed in 
       const user = userCredential.user;
       console.log(user);
-      alert("Successfully created an account")
+      alert("Successfully created an account");
+      navigate('/Login')
       // ...
     })
     .catch((error) => {
@@ -27,22 +29,6 @@ function Login() {
       // ..
     });
     }
-
-  const signIn = () => {
-
-    signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      console.log(user);
-      alert("This user has succesfully signed in!");
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      // const errorMessage = error.message;
-      alert(errorCode);
-    });
-  }
 
   return (
     <div className='Login'>
@@ -102,4 +88,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login

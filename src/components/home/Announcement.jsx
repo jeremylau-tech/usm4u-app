@@ -49,7 +49,7 @@ function Announcement() {
 */}
 
               </button>
-            </Link>
+            </Link>
           </div>
         </div>
         ))

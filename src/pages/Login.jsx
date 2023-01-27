@@ -1,7 +1,7 @@
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import app from '../firebase';
 import { React, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
 
@@ -9,7 +9,7 @@ function Login() {
 
   const [email, setEmail] = useState ("")
   const [password, setPassword] = useState ("")
-
+  const navigate = useNavigate();
   const signUp = () => {
 
     createUserWithEmailAndPassword(auth, email, password)
@@ -18,6 +18,7 @@ function Login() {
       const user = userCredential.user;
       console.log(user);
       alert("Successfully created an account")
+      
       // ...
     })
     .catch((error) => {
@@ -35,6 +36,7 @@ function Login() {
       const user = userCredential.user;
       console.log(user);
       alert("This user has succesfully signed in!");
+      navigate('/HomeSigned')
       
     })
     .catch((error) => {
@@ -118,4 +120,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login
