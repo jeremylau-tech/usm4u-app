@@ -34,7 +34,6 @@ function NavbarSigned() {
             </ul>
           </div>
 
-        
         {/** <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center ml-6'> */}
         <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center'>
           <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto content-center text-black hover:scale-105 duration-300'>
