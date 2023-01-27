@@ -1,11 +1,13 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Navbar from '../components/Navbar';
 
 function ActivityDetail() {
     const location = useLocation();
     const data = location.state?.data;
     return(
         <div className="ActivityDetail">
+            <Navbar />
             <div className='text-black bg-white pb-12'>
                 <div className='flex flex-col text-black text-center h-[90px] p-7'>
                     <h1 className='md:text-3xl sm:text-2xl text-xl font-bold mt-3 mb-2 mx-[80px]'>{data ? data.activityName : "Go to Home"}</h1>

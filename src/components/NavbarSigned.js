@@ -15,12 +15,22 @@ function Navbar() {
       <Link to='/' className='p-4'>
         <img className='w-[200px]' src={logo_usm_white} alt="/" />
       </Link>
-      <ul className='hidden lg:flex'> {/** hidden on mobile devices, above mb: flex */}
-        <Link to='/' className='p-4'>Home</Link>
+      <ul className='hidden lg:flex'> 
+        <Link to='/HomeSigned' className='p-4'>Home</Link>
+      <div onClick={handleNav} className='p-4'> 
+        <h1>hello</h1>
+        </div>
+        {/* <ul className = "dropdown p-4">
+          <li className="menu-items">
+            <a href="/CreateActivity" className=''>Create Activity</a>
+          </li>
+        </ul> */}
+
         <Link to='/CreateActivity' className='p-4'>Create Activity</Link>
         <Link to='/CreateOpportunity' className='p-4'>Create Opportunity</Link>
-        <Link to='/InfoHub' className='p-4'>InfoHub</Link>
-        <Link to='/Feedback' className='p-4'>Feedback</Link>
+        <Link to='/EditOpportunity' className='p-4'>Edit Activity</Link>
+        <Link to='/EditOpportunity' className='p-4'>Create Opportunity</Link>
+        
         <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center ml-6'>
           <button className='bg-[#F68B1F] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto content-center text-black hover:scale-105 duration-300'>
             Sign Out
@@ -39,8 +49,6 @@ function Navbar() {
           <a href='/' className='flex p-4 border-b border-gray-600'>Home</a>
           <a href='/Activities' className='flex p-4 border-b border-gray-600'>Activities</a>
           <a href='/Opportunities' className='flex p-4 border-b border-gray-600'>Opportunities</a>
-          <a href='/InfoHub' className='flex p-4 border-b border-gray-600'>InfoHub</a>
-          <a href='/Feedback' className='flex p-4 border-b border-gray-600'>Feedback</a>
         </ul>
         <div className='mx-7'>
           <Link to='/Home' className='w-[110px] h-[45px]'>

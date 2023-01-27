@@ -2,6 +2,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import app from '../firebase';
 import { React, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from '../components/Navbar';
 
 function Login() {
 
@@ -32,6 +33,7 @@ function Login() {
 
   return (
     <div className='Login'>
+      <Navbar />
       {/*<div class="bg-no-repeat bg-cover bg-center relative" style={{ */}
       <div class="bg-no-repeat bg-cover bg-center" style={{ 
         backgroundImage:
