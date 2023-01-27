@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { firestore } from "../firebase";
+import { addDoc, collection } from "@firebase/firestore";
+import { getDatabase, ref, onValue } from "firebase/database";
+
 export default function EditActivity() {
+
     return(
         <div>
             <div className='w-full bg-white py-16 lg:px-16 px-5'>

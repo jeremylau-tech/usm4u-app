@@ -4,8 +4,10 @@ import { addDoc, collection } from "@firebase/firestore";
 import OpportunitiesCreated from "../components/activities/OpportunitiesCreated";
 
 export default function CreateOpportunity() {
+    //state for pop up window to tell user opportunity sucessfully created
     const [showModal, setShowModal] = useState(false)
 
+    //ref for opportunity data
     const opportunityNameRef = useRef();
     const opportunityVenueRef = useRef();
     const opportunityDateRef = useRef();
@@ -13,7 +15,10 @@ export default function CreateOpportunity() {
     const opportunityPosterRef = useRef();
     const ref = collection(firestore, "opportunity");
 
+    //when user close pop up window, set visibility to false
     const handleOnClose = () => setShowModal(false);
+
+    //when user submit input form, add the data to database
     const handleSave = async(e) => {
         setShowModal(true)
         e.preventDefault();
@@ -39,6 +44,7 @@ export default function CreateOpportunity() {
         <div>
             <div className='w-full bg-white py-16 lg:px-16 px-5'>
                 <div className='lg:mx-0 mx-8 md:px-10 px-4 md:py-10 py-5 bg-slate-200 md:rounded-3xl rounded-2xl'>
+                    {/* Input form to obtain student opportunities details */}
                     <form onSubmit={ handleSave }>
                         <label className='block mb-7 mx-4 text-sm'>
                             <span className='block font-medium text-slate-700 my-[0.3rem] mx-1'>Opportunity Name:</span>
@@ -65,6 +71,7 @@ export default function CreateOpportunity() {
                 </div>
             </div>
             <div>
+                {/* Component for pop up window */}
                 <OpportunitiesCreated onClose={ handleOnClose } visible={showModal} />
             </div>
         </div>

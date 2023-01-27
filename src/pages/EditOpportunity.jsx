@@ -1,5 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import { firestore } from "../firebase";
+import { addDoc, collection } from "@firebase/firestore";
+import { getDatabase, ref, onValue } from "firebase/database";
+
 export default function EditOpportunity() {
+
+    // const oppName = oppData.map((doc)=>{
+    //    {doc.opportunityName}
+    // })
+    // console.log(oppName)
+
+    // console.log(oppData.map((doc)=>{
+    //     doc.data.opportunityName
+    // }))
+
+    // {oppData?.map((data) => (
+    //     console.log(data.data.opportunityName)
+    //     ))}
+
+    const [opportunities, setOpportunities] = useState([]);
+
+    useEffect(() => {
+        getOpportunites()
+    }, [])
+
+    const getOpportunites = async() => {
+        await getDocs(collection(firestore, 'opportunity'))
+            .then(response => {
+                console.log(response)
+                const opps = response.docs.map(opp => ({
+                    data: opp.data(), 
+                    id: opp.id, 
+                }))
+                setOpportunities(opps)
+            }).catch(error => console.log(error.message))
+    }
+
+
+
     return(
         <div>
             <div className='w-full bg-white py-16 lg:px-16 px-5'>
@@ -9,7 +47,15 @@ export default function EditOpportunity() {
                             <span className='block font-medium text-slate-700 my-[0.3rem] mx-1'>Select Opportunity:</span>
                             <select name="action" id="action" className='p-3 flex w-full h-10 rounded-lg text-black'>
                                 <option disabled selected>Choose Opportunity</option>
+                                {opportunity.map(opportunity => <option key={opportunity.id}>{opportunity.opportunityName}</option>)}
+                                {/* <option>{oppName}</option> */}
                                 {/* <option value="Create">Create Opportunity</option> */}
+                                {/* <ul>
+
+                                    {oppData?.map((data) => (
+                                        console.log(...data)
+                                        ))}
+                                </ul> */}
                             </select>    
                         </label>
                         <label className='block mb-7 mx-4 text-sm'>
