@@ -41,18 +41,7 @@ function ActivityDetail() {
                             </a>
                         </div>
                     </div>
-{/**
-                    <h2 className="text-xl font-bold pl-5 pb-3 pt-5">Date</h2>
-                    <p className="text-md pl-5 pb-3 mb-5">{data ? data.activityDate : "Go to Home"}</p>
-                    <h2 className="text-xl font-bold pl-5 pb-3">Start Time</h2>
-                    <p className="text-md pl-5 pb-3 mb-5">{data ? data.activityStartTime : "Go to Home"}</p>
-                    <h2 className="text-xl font-bold pl-5 pb-3">End Time</h2>
-                    <p className="text-md pl-5 pb-3 mb-5">{data ? data.activityEndTime : "Go to Home"}</p>
-                    <h2 className="text-xl font-bold pl-5 pb-3">Venue</h2>
-                    <p className="text-md pl-5 pb-3 mb-5">{data ? data.activityVenue : "Go to Home"}</p>
-                    <div className="pl-5 pb-3">
-                        <a href={data ? data.activityRegLink : "Go to Home"} className="btn" > Register Now</a>
-                    </div> */}
+
                 </div>
             </div>
         </div>        
