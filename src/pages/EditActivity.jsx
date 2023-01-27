@@ -1,8 +1,28 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import NavbarSigned from '../components/NavbarSigned';
+import { firestore } from "../firebase";
+import { addDoc, collection, getDocs } from "@firebase/firestore";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 
 export default function EditActivity() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        getActivities()
+    }, [])
+
+    const getActivities = async () => {       
+        await getDocs(collection(firestore, "activity"))
+            .then((querySnapshot)=>{               
+                const newData = querySnapshot.docs
+                    .map((doc) => ({...doc.data(), id:doc.id }));
+                setData(newData);
+                console.log(data, newData);                
+            })   
+      }
+
     return(
         
         <div>
@@ -14,7 +34,7 @@ export default function EditActivity() {
                             <span className='block font-medium text-slate-700 my-[0.3rem] mx-1'>Select Activity:</span>
                             <select name="action" id="action" className='p-3 flex w-full h-10 rounded-lg text-black'>
                                 <option disabled selected>Choose your activity</option>
-                                {/* <option value="Create">Create Activity</option> */}
+                                {data.map((data) => (<option key={data.id}>{data.activityName}</option>))}
                             </select>    
                         </label>
                         <label className='block mb-7 mx-4 text-sm'>
