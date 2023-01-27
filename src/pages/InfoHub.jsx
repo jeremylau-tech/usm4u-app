@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from '../components/Navbar';
 
 function InfoHub() {
   return (
     <div className='InfoHub'>
+      <Navbar />
       {/** Page title and desciption */}
       <div className='flex flex-col justify-center text-center bg-white'>
         <h1 className='text-[#F68B1F] md:text-4xl sm:text-3xl text-2xl font-bold mt-10 mb-2'>InfoHub</h1>

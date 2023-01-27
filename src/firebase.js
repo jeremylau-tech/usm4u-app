@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "@firebase/firestore";
+import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -9,6 +10,7 @@ import { getFirestore } from "@firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyB8lvtpNrqiQiNVpTQcxPBEcKs8SEhEzVg",
+  databaseURL: "https://usm4u-317b9-default-rtdb.firebaseio.com",
   authDomain: "usm4u-317b9.firebaseapp.com",
   projectId: "usm4u-317b9",
   storageBucket: "usm4u-317b9.appspot.com",
@@ -20,4 +22,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+export const db = getFirestore(app);
+export const auth = getAuth(app);
 export const firestore = getFirestore(app);
+export default app

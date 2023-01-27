@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { firestore } from "../firebase";
 import { addDoc, collection } from "@firebase/firestore";
 import ActivitiesCreated from "../components/activities/ActivitiesCreated";
+import NavbarSigned from '../components/NavbarSigned';
+
 
 export default function CreateActivity() {
     const [showModal, setShowModal] = useState(false)
@@ -41,6 +43,7 @@ export default function CreateActivity() {
 
     return(
         <div>
+            <NavbarSigned />
             <div className='w-full bg-white py-16 lg:px-16 px-5'>
                 <div className='lg:mx-0 mx-8 md:px-10 px-4 md:py-10 py-5 bg-slate-200 md:rounded-3xl rounded-2xl'>
                     <form onSubmit={ handleSave }>

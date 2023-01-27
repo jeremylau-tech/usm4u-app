@@ -1,6 +1,7 @@
 import React, { useRef }  from 'react';
 import { firestore } from "../firebase";
 import { addDoc, collection, query, orderBy, serverTimestamp, onSnapshot } from "@firebase/firestore";
+import Navbar from '../components/Navbar';
 
 function Feedback() {
   const nameRef = useRef();
@@ -15,6 +16,7 @@ function Feedback() {
   const q = query(ref, orderBy("createdAt", "asc"));
 
   const handleSave = async(e) => {
+    alert('We appreciate your feedback!');
     e.preventDefault();
     console.log(messageRef.current.value);
 
@@ -26,7 +28,7 @@ function Feedback() {
       createdAt:serverTimestamp(),
     }
 
-    // testing
+    // testing filtration
     onSnapshot(q, (snapshot) => {
       let feedback = []
       snapshot.docs.forEach((doc) => {
@@ -41,10 +43,13 @@ function Feedback() {
     } catch(e) {
       console.log(e);
     }
+
+    e.target.reset();
   }
 
   return (
     <div className='Feedback'>
+      <Navbar />
       <div className='w-full bg-white py-16 lg:px-16 px-5'>
         <div className='mac-w-[1240px] mx-auto grid lg:grid-cols-2 gap-8 bg-white'>
           <div className='flex flex-col justify-center text-center'>
