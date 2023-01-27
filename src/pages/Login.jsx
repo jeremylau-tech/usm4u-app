@@ -53,7 +53,7 @@ function Login() {
       {/*<div class="bg-no-repeat bg-cover bg-center relative" style={{ */}
       <div class="bg-no-repeat bg-cover bg-center" style={{ 
         backgroundImage:
-          'url("https://scontent-kut2-1.xx.fbcdn.net/v/t39.30808-6/318573914_944913476490944_8042798349385653019_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeF4GJKV7kPVC8cUdq-FeTxcQkNyvQ15-TxCQ3K9DXn5PJn_ALTNW4MBM-UEMPexHVOiAy4JJKtHUjQjKM6tboNj&_nc_ohc=TR-lTnnqJNkAX9PPkVl&tn=gtXCMviIUS2xCExU&_nc_ht=scontent-kut2-1.xx&oh=00_AfD898oOyrmKKyIz38RWJCDnIWrlDRqHxGQpyZkcp6qw0A&oe=63C72917&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80")',
+          'url("https://scontent-kut2-1.xx.fbcdn.net/v/t39.30808-6/318573914_944913476490944_8042798349385653019_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeF4GJKV7kPVC8cUdq-FeTxcQkNyvQ15-TxCQ3K9DXn5PJn_ALTNW4MBM-UEMPexHVOiAy4JJKtHUjQjKM6tboNj&_nc_ohc=Y1D27-jmzV8AX89KyM_&tn=gtXCMviIUS2xCExU&_nc_ht=scontent-kut2-1.xx&oh=00_AfCT-xIdo3OSHqomFX3QI4gibV3lg-hUygYxkLfTrDHceQ&oe=63D8F557&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80")',
         }}>   
         {/*<div class="absolute bg-gradient-to-b from-purple-500 to-purple-400 opacity-20 inset-0 z-0"></div> */}
         <div class="bg-gradient-to-b from-purple-500 to-purple-400 opacity-20 inset-0 z-0"></div>
