@@ -50,7 +50,7 @@ function Announcement() {
 
               </button>
             </Link>
-          </div>
+            </div>
         </div>
         ))
       }        
