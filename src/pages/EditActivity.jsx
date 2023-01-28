@@ -2,17 +2,20 @@ import React from "react";
 import { useEffect, useState } from "react";
 import NavbarSigned from '../components/NavbarSigned';
 import { firestore } from "../firebase";
-import { addDoc, collection, getDocs } from "@firebase/firestore";
-import { getDatabase, ref, onValue } from "firebase/database";
+import { updateDoc, collection, getDocs, doc } from "@firebase/firestore";
 
 
 export default function EditActivity() {
+    //state for storing list of activities stored in firebase
     const [data, setData] = useState([]);
+    //state for storing document ID to be updated
+    const [selectedDocID, setSelectedDocID] = useState("");
 
     useEffect(() => {
         getActivities()
     }, [])
 
+    //Function to get the activities stored in the database
     const getActivities = async () => {       
         await getDocs(collection(firestore, "activity"))
             .then((querySnapshot)=>{               
@@ -21,20 +24,47 @@ export default function EditActivity() {
                 setData(newData);
                 console.log(data, newData);                
             })   
-      }
+    }
 
-    return(
-        
+    //Once user selects a choice in dropdown column, set the document ID
+    const handleChange = (event) => {
+        setSelectedDocID(event.target.value)
+    }
+
+    //Update once user click save
+    const handleUpdate = async(e) => {
+        console.log(selectedDocID)
+        e.preventDefault();
+
+        let activityData = {
+            activityName: e.target.elements["activity name"].value,
+            activityVenue: e.target.elements["activity venue"].value,
+            activityDate: e.target.elements["activity date"].value,
+            activityRegLink: e.target.elements["activity link"].value,
+            activityStartTime: e.target.elements["activity start time"].value,
+            activityEndTime: e.target.elements["activity end time"].value,
+            activityPoster: e.target.elements["activity poster"].value,
+        }
+
+        try{
+            updateDoc(doc(firestore, "activity", selectedDocID), activityData);
+        } catch(e) {
+            console.log(e);
+        }
+        e.target.reset();
+    }  
+
+    return(        
         <div>
             <NavbarSigned />
             <div className='w-full bg-white py-16 lg:px-16 px-5'>
                 <div className='lg:mx-0 mx-8 md:px-10 px-4 md:py-10 py-5 bg-slate-200 md:rounded-3xl rounded-2xl'>
-                    <form>
+                    <form onSubmit={handleUpdate}>
                         <label className='block mb-7 mx-4 text-sm'>
                             <span className='block font-medium text-slate-700 my-[0.3rem] mx-1'>Select Activity:</span>
-                            <select name="action" id="action" className='p-3 flex w-full h-10 rounded-lg text-black'>
+                            <select onChange={handleChange} name="action" id="action" className='p-3 flex w-full h-10 rounded-lg text-black'>
                                 <option disabled selected>Choose your activity</option>
-                                {data.map((data) => (<option key={data.id}>{data.activityName}</option>))}
+                                {data.map((data) => (<option value={data.id} key={data.id}>{data.activityName}</option>))}
                             </select>    
                         </label>
                         <label className='block mb-7 mx-4 text-sm'>
