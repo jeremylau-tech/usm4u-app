@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { firestore } from '../firebase'
 import { Link } from 'react-router-dom'
 import { getDocs, collection } from "@firebase/firestore";
+import Navbar from '../components/Navbar';
 
 function Opportunities() {
 
@@ -23,6 +24,7 @@ function Opportunities() {
 
   return (
     <div className='Opportunities'>
+      <Navbar />
       <div className='flex flex-col text-black text-center bg-white'> {/** TESTING */}
         <h1 className='text-[#F68B1F] md:text-4xl sm:text-3xl text-2xl font-bold mt-10 mb-2'>Opportunities</h1>
         <div className='md:text-base text-sm my-1 md:my-2 lg:mx-14 mx-6 text-justify'>

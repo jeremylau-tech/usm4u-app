@@ -1,11 +1,13 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Navbar from '../components/Navbar';
 
 function ActivityDetail() {
     const location = useLocation();
     const data = location.state?.data;
     return(
         <div className="ActivityDetail">
+            <Navbar />
             <div className='text-black bg-white pb-12'>
                 <div className='flex flex-col text-black text-center h-[90px] p-7'>
                     <h1 className='md:text-3xl sm:text-2xl text-xl font-bold mt-3 mb-2 mx-[80px]'>{data ? data.activityName : "Go to Home"}</h1>
@@ -39,18 +41,7 @@ function ActivityDetail() {
                             </a>
                         </div>
                     </div>
-{/**
-                    <h2 className="text-xl font-bold pl-5 pb-3 pt-5">Date</h2>
-                    <p className="text-md pl-5 pb-3 mb-5">{data ? data.activityDate : "Go to Home"}</p>
-                    <h2 className="text-xl font-bold pl-5 pb-3">Start Time</h2>
-                    <p className="text-md pl-5 pb-3 mb-5">{data ? data.activityStartTime : "Go to Home"}</p>
-                    <h2 className="text-xl font-bold pl-5 pb-3">End Time</h2>
-                    <p className="text-md pl-5 pb-3 mb-5">{data ? data.activityEndTime : "Go to Home"}</p>
-                    <h2 className="text-xl font-bold pl-5 pb-3">Venue</h2>
-                    <p className="text-md pl-5 pb-3 mb-5">{data ? data.activityVenue : "Go to Home"}</p>
-                    <div className="pl-5 pb-3">
-                        <a href={data ? data.activityRegLink : "Go to Home"} className="btn" > Register Now</a>
-                    </div> */}
+
                 </div>
             </div>
         </div>        
