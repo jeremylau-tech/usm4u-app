@@ -17,22 +17,10 @@ function NavbarSigned() {
       </Link>
       <ul className='hidden lg:flex'> 
         <Link to='/HomeSigned' className='p-4 flex'>Home</Link>
+        <Link to='/CreateActivity' className='p-4 flex'>Create Opportunity</Link>
+        <Link to='/CreateOpportunity' className='p-4 flex'>Create Opportunity</Link>
 
-      <div className="dropdown p-4">
-            <label tabIndex={0} className="flex">Activities</label>
-            <ul tabIndex={0} className="dropdown-content menu shadow bg-base-100 rounded-box w-52 text-black hover:bg-white active:bg-white">
-              <li><a href='/CreateActivity'>Create Activity</a></li>
-              <li><a href='/EditActivity'>Edit Activity</a></li>
-            </ul>
-          </div>
-
-          <div className="dropdown p-4">
-            <label tabIndex={0} className="flex">Opportunities</label>
-            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-black">
-              <li><a href='/CreateOpportunity'>Create Opportunity</a></li>
-              <li><a href='/EditOpportunity'>Edit Opportunity</a></li>
-            </ul>
-          </div>
+    
 
         {/** <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center ml-6'> */}
         <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center'>

@@ -37,7 +37,7 @@ function Activities() {
               data?.map((data)=>(
                 <div className='flex justify-center'>
                     <div className="card w-[340px] bg-base-100 shadow-2xl m-7">
-                      <figure><img src="https://placeimg.com/400/225/arch" alt="Event" /></figure>
+                      <figure><img src="https://scontent-kut2-2.xx.fbcdn.net/v/t39.30808-6/320601357_1404449593426093_9026444688142777961_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGKivPALndWDg63hLHssrHTGLaeK8znh7UYtp4rzOeHtQKmJkVy0gcv8Z6zfal6NVaEIDBo6eqsgpRXqsgCIxHZ&_nc_ohc=6-spOwEKHzYAX_w7of2&_nc_ht=scontent-kut2-2.xx&oh=00_AfARui1BJyp6YmK-QmE-ajCzf4fAZ0cgv6Dn15MwUB3R4g&oe=63D8B5EF" alt="Event" /></figure>
                       <div className="card-body text-justify">
                         <h2 className="card-title">{data.activityName}</h2>
                         <p className="leading-5">{data.activityDate}</p>
