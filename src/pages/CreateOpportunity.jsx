@@ -56,6 +56,9 @@ export default function CreateOpportunity() {
                         <span className='block font-medium text-slate-700 my-[0.3rem] mx-1'>Opportunity Date:</span> 
                             <input type="date" name="Opportunity date" ref={opportunityDateRef} className='p-3 flex w-full h-10 rounded-lg text-black' required/>
                         </label>
+
+{/* date url file */}
+
                         <label className='block mb-7 mx-4 text-sm'>
                         <span className='block font-medium text-slate-700 my-[0.3rem] mx-1'>Opportunity Registration Link:</span> 
                             <input type="url" name="Opportunity link" ref={opportunityRegLinkRef} className='p-3 flex w-full h-10 rounded-lg text-black' required/>
