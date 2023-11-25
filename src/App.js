@@ -18,13 +18,14 @@ import CreateOpportunity from './pages/CreateOpportunity';
 import CreateActivity from './pages/CreateActivity';
 import EditActivity from './pages/EditActivity';
 import EditOpportunity from './pages/EditOpportunity';
+import DialogflowMessenger from './components/DialogflowMessenger.js';
 
 
 function App() {
 
   return (
     <div className="App">
-
+      <DialogflowMessenger />
       <div>
         <Routes> {/** outside Routes: display for all pages */}
           <Route path='/HomeSigned' element ={<HomeSigned />} />
