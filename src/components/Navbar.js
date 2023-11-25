@@ -38,10 +38,10 @@ function Navbar() {
         </a>
         <ul className='p-4'>
           <a href='/' className='flex p-4 border-b border-gray-600'>Home</a>
-          <a href='/Activities' className='flex p-4 border-b border-gray-600'>Net Worth</a>
+          <a href='/Networth' className='flex p-4 border-b border-gray-600'>Net Worth</a>
           <a href='/Opportunities' className='flex p-4 border-b border-gray-600'>Expenses</a>
-          <a href='/InfoHub' className='flex p-4 border-b border-gray-600'>Mission</a>
-          <a href='/Feedback' className='flex p-4 border-b border-gray-600'>Ask CoCo</a>
+          <a href='/Opportunities' className='flex p-4 border-b border-gray-600'>Mission</a>
+          <a href='/Opportunities' className='flex p-4 border-b border-gray-600'>Ask CoCo</a>
         </ul>
         <div className='mx-7'>
           <Link to='/Login' className='w-[110px] h-[45px]'>
