@@ -18,7 +18,7 @@ function Navbar() {
       </Link>
       <ul className='hidden lg:flex'> {/** hidden on mobile devices, above mb: flex */}
         <Link to='/' className='p-4'>Home</Link>
-        <Link to='/Activities' className='p-4'>Net Worth</Link>
+        <Link to='/NetWorth' className='p-4'>Net Worth</Link>
         <Link to='/Opportunities' className='p-4'>Expenses</Link>
         <Link to='/InfoHub' className='p-4'>Mission</Link>
         <Link to='/Feedback' className='p-4'>Ask CoCo</Link>
