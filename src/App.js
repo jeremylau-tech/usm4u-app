@@ -1,6 +1,4 @@
 import './App.css';
-import Chart from "chart.js/auto";
-import { CategoryScale } from "chart.js";
 import Navbar from './components/Navbar';
 import NavbarSigned from './components/NavbarSigned';
 import Footer from './components/Footer';
@@ -26,9 +24,6 @@ import EditOpportunity from './pages/EditOpportunity';
 import ChartComponent from './pages/ChartComponent.jsx';
 import DialogflowMessenger from './components/DialogflowMessenger.js';
 
-Chart.register(CategoryScale);
-
-
 function App() {
 
   return (
@@ -48,7 +43,7 @@ function App() {
           <Route path='/Activities' element ={<Activities />} />
           <Route path='/ActivityDetail' element ={<ActivityDetail />} />
           <Route path='/Opportunities' element ={<Opportunities />} />
-          <Route path='/Finance' element ={<Finance />} />
+          <Route path='/NetWorth' element ={<Finance />} />
           <Route path='/OpportunityDetail' element ={<OpportunityDetail />} />
           <Route path='/FinanceDetail' element ={<FinanceDetail />} />
           <Route path='/InfoHub' element ={<InfoHub />} />
