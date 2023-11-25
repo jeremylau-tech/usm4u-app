@@ -43,9 +43,9 @@ function Login() {
         <div class="bg-gradient-to-b from-purple-500 to-purple-400 opacity-20 inset-0 z-0"></div>
         <div class="min-h-screen sm:flex sm:flex-row mx-0 justify-center gap-12">
           <div class="flex-col hidden lg:flex mt-[130px] py-10 pr-10 sm:max-w-5xl xl:max-w-2xl z-10">
-            <div class="self-start flex flex-col text-white">
-              <h1 class="mb-3 font-bold text-5xl">Welcome To USM4U</h1>
-              <p class="pr-3 italic">Your one and only, student application.</p>
+            <div class="self-start flex flex-col text-black">
+              <h1 class="mb-3 font-bold text-5xl">Welcome To CoCo</h1>
+              <p class="pr-3 italic">Your one and only, financial application.</p>
             </div>
           </div>
           <div class="flex justify-center self-center z-10 py-10 lg:py-0">
@@ -79,8 +79,8 @@ function Login() {
               </div>
             </div>
             <div class="pt-5 text-center text-gray-400 text-xs">
-              <span>Copyright © 2022-2023 |
-              <a href="https://codepen.io/uidesignhub" rel="" target="blank" title="Ajimon" class="text-green hover:text-green-500 "> USM4U</a></span>
+              <span>Copyright © 2023 |
+              <a href="https://codepen.io/uidesignhub" rel="" target="blank" title="Ajimon" class="text-green hover:text-green-500 "> COCO</a></span>
             </div>
           </div>
         </div>

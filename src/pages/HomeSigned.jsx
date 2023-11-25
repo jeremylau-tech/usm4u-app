@@ -1,6 +1,6 @@
 import React from 'react';
 import NavbarSigned from '../components/NavbarSigned';
-import Hero from '../components/home/Hero';
+import Hero2 from '../components/home/Hero2';
 import Announcement from '../components/home/Highlights';
 import Highlights from '../components/home/Announcement';
 
@@ -8,9 +8,9 @@ function HomeSigned() {
   return (
     <div>
       <NavbarSigned />
-      <Hero />
-      <Highlights />
-      <Announcement />
+      <Hero2 />
+      {/* <Highlights />
+      <Announcement /> */}
     </div>
   )
 }

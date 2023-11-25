@@ -10,8 +10,8 @@ function Home() {
     <div>
       <Navbar />
       <Hero />
-      <Highlights />
-      <Announcement />
+      {/* <Highlights />
+      <Announcement /> */}
     </div>
   )
 }
