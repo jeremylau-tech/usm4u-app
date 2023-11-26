@@ -26,7 +26,7 @@ function Finance() {
     <div className='Finance'>
       <Navbar />
       <div className='flex flex-col text-black text-center bg-white'> {/** TESTING */}
-        <h1 className='text-[#F68B1F] md:text-4xl sm:text-3xl text-2xl font-bold mt-10 mb-2'>Finance</h1>
+        <h1 className='text-[#008080] md:text-4xl sm:text-3xl text-2xl font-bold mt-10 mb-2'>Finance</h1>
         <div className='md:text-base text-sm my-1 md:my-2 lg:mx-14 mx-6 text-justify'>
           <p className='text-center italic font-medium text-gray-400'>Looking for some opportunities? Don't worry, we've got you!</p>
         </div>
@@ -36,7 +36,9 @@ function Finance() {
               data?.map((data)=>(
                 
                 <div className='grid lg:grid-cols-3 justify-center mx-[120px] pb-12'>
-                <div className="card w-[340px] bg-base-100 shadow-2xl m-7">
+              
+                
+                <div className="card w-[340px] bg-base-100 shadow-2xl m-7 bg-blue-200">
                   <div className="card-body text-justify">
                     <h2 className="card-title">ASNB Savings</h2>
                     <p className="leading-5">RM{data.asnb}</p>
@@ -46,7 +48,7 @@ function Finance() {
                     </div>
                   </div>
                 </div>
-                <div className="card w-[340px] bg-base-100 shadow-2xl m-7">
+                <div className="card w-[340px] bg-base-100 shadow-2xl m-7 bg-red-200">
                   <div className="card-body text-justify">
                     <h2 className="card-title">Hong Leong Bank</h2>
                     <p className="leading-5">RM{data.hongleong}</p>
@@ -56,7 +58,7 @@ function Finance() {
                     </div>
                   </div>
                 </div>
-                <div className="card w-[340px] bg-base-100 shadow-2xl m-7">
+                <div className="card w-[340px] bg-base-100 shadow-2xl m-7 bg-purple-200">
                   <div className="card-body text-justify">
                     <h2 className="card-title">Ethereum</h2>
                     <p className="leading-5">RM{data.ethereum}</p>
@@ -66,7 +68,7 @@ function Finance() {
                     </div>
                   </div>
                 </div>
-                <div className="card w-[340px] bg-base-100 shadow-2xl m-7">
+                <div className="card w-[340px] bg-base-100 shadow-2xl m-7 bg-yellow-200">
                   <div className="card-body text-justify">
                     <h2 className="card-title">MAE</h2>
                     <p className="leading-5">RM{data.mae}</p>
@@ -76,7 +78,7 @@ function Finance() {
                     </div>
                   </div>
                 </div>
-                <div className="card w-[340px] bg-base-100 shadow-2xl m-7">
+                <div className="card w-[340px] bg-base-100 shadow-2xl m-7 bg-blue-200">
                   <div className="card-body text-justify">
                     <h2 className="card-title">TnG</h2>
                     <p className="leading-5">RM{data.asnb}</p>
@@ -86,7 +88,7 @@ function Finance() {
                     </div>
                   </div>
                 </div>
-                <div className="card w-[340px] bg-base-100 shadow-2xl m-7">
+                <div className="card w-[340px] bg-base-100 shadow-2xl m-7 bg-green-200">
                   <div className="card-body text-justify">
                     <h2 className="card-title">Grab</h2>
                     <p className="leading-5">RM{data.grab}</p>

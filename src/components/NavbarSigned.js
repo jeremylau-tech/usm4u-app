@@ -18,11 +18,11 @@ function NavbarSigned() {
         <img className='w-[100px]' src={coco_logo} alt="/" />
       </Link>
       <ul className='hidden lg:flex'> 
-        <Link to='/HomeSigned' className='p-4 flex'>Home</Link>
-        <Link to='/Activities' className='p-4'>Net Worth</Link>
-        <Link to='/Opportunities' className='p-4'>Expenses</Link>
-        <Link to='/InfoHub' className='p-4'>Mission</Link>
-        <Link to='/Feedback' className='p-4'>Ask CoCo</Link>
+        <Link to='/' className='p-4 flex'>Home</Link>
+        <Link to='/networth' className='p-4'>Net Worth</Link>
+        <Link to='/expenses' className='p-4'>Daily Stat</Link>
+        <Link to='/feedback' className='p-4'>Feedback</Link>
+        <Link to='/askcoco' className='p-4'>Ask CoCo</Link>
 
         {/** <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center ml-6'> */}
         <Link to='/Login' className='w-[110px] h-[45px] mx-auto my-auto content-center'>
@@ -41,17 +41,12 @@ function NavbarSigned() {
         </a>
         <ul className='p-4'>
           <a href='/' className='flex p-4 border-b border-gray-600'>Home</a>
-          <a href='/Activities' className='flex p-4 border-b border-gray-600'>Net Worth</a>
-          <a href='/Opportunities' className='flex p-4 border-b border-gray-600'>Expenses</a>
-          <a href='/Opportunities' className='flex p-4 border-b border-gray-600'>Mission</a>
-          <a href='/Opportunities' className='flex p-4 border-b border-gray-600'>Ask CoCo</a>
+          <a href='/networth' className='flex p-4 border-b border-gray-600'>Net Worth</a>
+          <a href='/expenses' className='flex p-4 border-b border-gray-600'>Daily Stat</a>
+          <a href='/feedback' className='flex p-4 border-b border-gray-600'>Feedback</a>
+          <a href='/askcoco' className='flex p-4 border-b border-gray-600'>Ask CoCo</a>
         </ul>
         <div className='mx-7'>
-          <Link to='/Home' className='w-[110px] h-[45px]'>
-            <button className='bg-[#93E9BE] w-[110px] h-[45px] font-medium rounded-lg mx-auto my-auto mt-14 content-center text-black hover:scale-105 duration-300'>
-              Sign Out
-            </button>
-          </Link>
         </div>
       </div>
     </div>

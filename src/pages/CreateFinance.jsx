@@ -14,6 +14,7 @@ export default function CreateFinance() {
     const hongleongRef = useRef();
     const maeRef = useRef();
     const tngRef = useRef();
+    const hariRef = useRef();
     const ref = collection(firestore, "finance");
 
     const handleOnClose = () => setShowModal(false);
@@ -28,6 +29,7 @@ export default function CreateFinance() {
             hongleong: hongleongRef.current.value, 
             mae: maeRef.current.value,
             tng: tngRef.current.value,
+            hari: hariRef.current.value,
         }
 
         try{
